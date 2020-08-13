@@ -1,3 +1,7 @@
+/*
+  SETs data structures, doesn't matter the order of the data in this type of data structure
+*/
+
 function mySet() {
   // this collection will hold the set
   let collection = [];
@@ -88,3 +92,16 @@ function mySet() {
     });
   };
 }
+
+const setA = new mySet();
+const setB = new mySet();
+setA.add("a");
+setB.add("b");
+setB.add("c");
+setB.add("d");
+setB.add("e");
+setB.add("a");
+setB.add("g");
+
+console.log(setA.subset(setB));
+console.log(setA.intersection(setB).values());
